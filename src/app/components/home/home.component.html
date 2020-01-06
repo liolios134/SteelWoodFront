@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="bd-example">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" 
+                    [class.active]="isFirst" 
+                    *ngFor="
+                    let item of home.carousel;
+                    index as i;
+                    first as isFirst;
+                    last as isLast;
+                    even as isEven;
+                    odd as isOdd;">
+                      <img [src]="item" class="d-block w-100 img-fluid img-slide" alt="...">
+                      <div class="carousel-caption d-none d-md-block" *ngFor="let title of home.title">
+                        <h5>{{title}}</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <p class="lead">{{home.desc}}</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="dropdown-divider"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-4">
+            <h3 class="text-center font-weight-light">Featured Projects</h3>
+        </div>
+        <div class="col-3 mt-4" *ngFor="let p of home.photo">
+            <img [src]="p" alt="" class="img-fluid">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-4">
+            <div class="dropdown-divider"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-4">
+            <h3 class="text-center font-weight-light">Follow us on Instagram @steelwoodgr</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8 ">
+            <div class="row">
+                <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                    <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+                </a>
+                <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                    <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+                </a>
+                <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                    <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+                </a>
+            </div>
+            <div class="row mt-4">
+                <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                    <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+                </a>
+                <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                    <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+                </a>
+                <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                    <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

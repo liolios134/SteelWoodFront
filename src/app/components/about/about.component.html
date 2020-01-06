@@ -1,0 +1,50 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="text-center font-weight-light">About Us</h1>
+        </div>
+    </div>
+</div>
+<div class="container mt-5" *ngFor="let a of about">
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <img [src]="a.comLogo" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-8 my-2">
+            <h3 class="text-center font-weight-light">{{a.comName}}</h3>
+            <p>{{a.comDesc}}</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="dropdown-divider"></div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5" *ngFor="let a of about">
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <img [src]="a.crePhoto" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-6 my-2">
+            <h3 class="text-center font-weight-light">{{a.creator}}</h3>
+            <p>{{a.creDesc}}</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="dropdown-divider"></div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="text-center font-weight-light">Our Friends</h2>
+        </div>
+    </div>
+</div>

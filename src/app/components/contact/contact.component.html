@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12" *ngFor="let c of contact">
+            <h1 class="text-center font-weight-light">
+                {{c.title}}
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <div *ngFor="let c of contact" class="col-sm-6">
+            <h4 class="mb-4 font-weight-light">{{c.conPara}}</h4>
+            <h6 class="mb-1 font-weight-light"><i class="fa fa-phone"></i> +30 {{c.phone}}</h6>
+            <h6 class="mb-1 font-weight-light mb-4"><i class="fa fa-envelope"></i> {{c.email}}</h6>
+            <agm-map *ngFor="let d of departments"
+                [latitude]="d.latitude"
+                [longitude]="d.longitude"
+                [zoom]="mapZoom"
+            ></agm-map>
+        </div>
+        <div class="col-sm-6">
+            <form class="mb-4">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Name</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Email</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Message</label>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                  </div>
+                  <div>
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                  </div>
+              </form>
+        </div>
+    </div>
+</div>
