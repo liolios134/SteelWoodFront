@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
 
     this.route.params.subscribe(params => {
 
-    this.http.get("http://localhost:3000/products" + params.productId)
+    this.http.get("http://localhost:3000/products/" + params.productId)
     .subscribe(response => {
       this.product=response;
     });

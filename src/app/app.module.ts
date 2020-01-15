@@ -62,9 +62,7 @@ const routes = [
     BrowserModule,
     NgbModule,
     RouterModule.forRoot(routes),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDMBCo_h4xE8vRCDagsr3f8y8qMwk6-dUo'
-    }),
+    AgmCoreModule.forRoot(),
     BrowserAnimationsModule,
     FilterPipeModule,
     FormsModule,
