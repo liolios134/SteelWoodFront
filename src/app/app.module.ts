@@ -17,6 +17,9 @@ import { AgmCoreModule } from '@agm/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FormsModule } from '@angular/forms';
+import { NgxWebstorageModule } from 'ngx-webstorage';
+import { CartComponent } from './components/cart/cart.component';
+
 
 const routes = [
   {
@@ -38,8 +41,13 @@ const routes = [
   {
     path: "contact",
     component: ContactComponent
+  },
+  {
+    path:"cart",
+    component: CartComponent
   }
-  
+
+
 ];
 
 
@@ -55,7 +63,8 @@ const routes = [
     ProductsComponent,
     ProductComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    CartComponent
   ],
   imports: [
     HttpClientModule,
@@ -66,7 +75,8 @@ const routes = [
     BrowserAnimationsModule,
     FilterPipeModule,
     FormsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    NgxWebstorageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

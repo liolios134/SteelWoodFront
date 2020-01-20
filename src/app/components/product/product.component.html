@@ -12,7 +12,15 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <p class="text-center mt-5">{{product.description}}</p>
+        <p class="text-center mt-5">{{product.desc}}</p>
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-primary" (click)="addToCart(product._id)"> add to cart</button>
+      </div>
+    </div>
+  </div>
+  
